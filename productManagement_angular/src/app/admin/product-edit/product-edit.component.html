@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="text-center">Edit Product</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group" [hidden]="true">
+      <label for="id">Product ID</label>
+      <input type="text" placeholder="Product ID" class="form-control" id="id" formControlName="id">
+    </div> -->
+    <div class="form-group">
+      <label for="title">Product Name</label>
+      <input type="text" placeholder="Product Name" class="form-control" id="title" formControlName="title" >
+    </div>
+    <div class="text-danger" *ngIf="myForm.controls.title.invalid &&(myForm.controls.title.dirty||myForm.controls.title.touched)">Product name required</div>
+    <div class="form-group">
+      <label for="detail">Product Detail</label>
+      <input type="text" placeholder="Product detail" class="form-control" id="detail" formControlName="detail">
+    </div>
+    <div class="formform-group">
+      <label for="price">Product Price</label>
+      <input type="number" placeholder="Product Price" class="form-control" id="price" formControlName="price">
+    </div>
+    <button type="submit" class="btn btn-danger" [disabled]="myForm.invalid">Submit</button>
+    <a [routerLink]="['/admin/product-list']" class="btn btn-primary float-right">back</a>
+  </form>
+</div>

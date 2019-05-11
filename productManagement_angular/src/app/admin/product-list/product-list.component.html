@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+  <a [routerLink]="['/admin/product-create']" class="btn btn-danger">Add Product</a>
+    <!-- <button class="btn btn-danger" (click)="addProduct()">add</button> -->
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th> product id</th> -->
+        <th> name</th>
+        <th>details</th>
+        <th>price</th>
+        <th>operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <!-- <td>{{product.id}}</td> -->
+        <td>{{product.title}}</td>
+        <td>{{product.detail}}</td>
+        <td>{{product.price}}</td>
+        <td>
+          <!-- <button class="btn btn-primary" (click)="editProduct()">edit</button> -->
+          <!-- <a [routerLink]="['/product-edit/',product.id]" class="btn btn-primary">Edit</a> -->
+          <a [routerLink]="['/admin/product-edit/']"
+          [queryParams]="{id:product._id}" class="btn btn-primary">Edit</a>
+          <button class="btn btn-danger" style="margin-left:1vh;" (click)="deleteProduct(product._id)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

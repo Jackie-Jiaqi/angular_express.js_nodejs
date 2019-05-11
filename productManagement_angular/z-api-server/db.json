@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "title": "product name 2",
+      "detail": "product detail 2",
+      "price": 99.2
+    },
+    {
+      "id": 3,
+      "title": "product name 3",
+      "detail": "product detail 3",
+      "price": 99.3
+    },
+    {
+      "id": 4,
+      "title": "product name 3",
+      "detail": "product detail 3",
+      "price": 99.3
+    },
+    {
+      "id": 5,
+      "title": "product name 3",
+      "detail": "product detail 3",
+      "price": 99.3
+    },
+    {
+      "id": 6,
+      "title": "product name 3",
+      "detail": "product detail 3",
+      "price": 99.3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "name 1",
+      "age": 18,
+      "mail": "user1@mail.com"
+    },
+    {
+      "id": 2,
+      "name": "name 2",
+      "age": 28,
+      "mail": "user2@mail.com"
+    }
+  ]
+}
